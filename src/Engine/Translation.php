@@ -48,7 +48,7 @@ class Translation
             $this->files[] = basename($file->getPathname(), '.php');
         }
 
-        $this->fillEmpty = $fillEmpty;
+        $this->fillEmpty = config('TranslationsEditor.fillEmpty');
     }
 
     private function langPath()
