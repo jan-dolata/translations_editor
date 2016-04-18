@@ -11,7 +11,7 @@ use View;
  * Controller for translation
  * @author Jan Dolata <j.dolata@holonglobe.com>
  */
-class Controller extends Controller
+class TranslationController extends Controller
 {
 
     /**
@@ -20,7 +20,7 @@ class Controller extends Controller
     public function get($file = 'all')
     {
         $data = (new TranslationApi)->get($file);
-        return view('index', $data);
+        return view('TranslationsEditor::index', $data);
     }
 
     /**
@@ -41,6 +41,6 @@ class Controller extends Controller
     public function log()
     {
         $data = (new TranslationApi)->log();
-        return view('log', $data);
+        return view('TranslationsEditor::log', $data);
     }
 }

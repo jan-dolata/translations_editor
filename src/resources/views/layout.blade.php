@@ -1,17 +1,17 @@
 <!doctype html>
 
 <head>
-    @include('partials.head')
+    @include('TranslationsEditor::partials.head')
 </head>
 
 <body>
-    @include('partials.nav')
+    @include('TranslationsEditor::partials.nav')
 
     <div class="container">
         @yield('content')
     </div>
 
-    @include('partials.footer')
+    @include('TranslationsEditor::partials.footer')
 </body>
 
 <script type="text/javascript">
