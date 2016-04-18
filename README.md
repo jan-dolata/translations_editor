@@ -15,9 +15,54 @@ Via Composer
 $ composer require jan-dolata/translations_editor
 ```
 
+Add ServiceProvider to `config/app`.
+
+```
+JanDolata\TranslationsEditor\TranslationsEditorServiceProvider::class
+```
+
+And publish TranslationsEditor config.
+
+``` bash
+$ php artisan vendor:publish
+```
+
+Check config file.
+
+```
+config/TranslationsEditor.php
+```
+
+Add `resources/lang/xx` for all used laguages to `.gitignore`.
+
+ex.
+```
+/resources/lang/en
+/resources/lang/de
+/resources/lang/pl
+```
+
+Change folder name `resources/lang/en` to `resources/lang/base`.
+
+``` bash
+$ mv resources/lang/en resources/lang/base
+```
+
+If you need, use seed. Add `TranslationSeeder` in `DatabaseSeeder.php`.
+
+```
+$this->call(JanDolata\TranslationsEditor\Engine\TranslationSeeder::class);
+```
+
+Done !
+
 ## Usage
 
-soon
+Go to `.../translation/get` to edit your translations lines.
+
+Before save, backup file will store in `storage/app/translations`.
+Check that in `.../translation/log` page.
+
 
 ## Change log
 
