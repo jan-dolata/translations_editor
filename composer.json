@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "jan-dolata\\translations_editor\\": "src"
+            "JanDolata\\TranslationsEditor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "jan-dolata\\translations_editor\\": "tests"
+            "JanDolata\\TranslationsEditor\\": "tests"
         }
     },
     "scripts": {
