@@ -33,6 +33,12 @@ Check config file.
 config/TranslationsEditor.php
 ```
 
+Change folder name `resources/lang/en` to `resources/lang/base` (for new project).
+
+``` bash
+$ mv resources/lang/en resources/lang/base
+```
+
 Add `resources/lang/xx` for all used laguages to `.gitignore`.
 
 ex.
@@ -40,12 +46,6 @@ ex.
 /resources/lang/en
 /resources/lang/de
 /resources/lang/pl
-```
-
-Change folder name `resources/lang/en` to `resources/lang/base`.
-
-``` bash
-$ mv resources/lang/en resources/lang/base
 ```
 
 If you need, use seed. Add `TranslationSeeder` in `DatabaseSeeder.php`.
@@ -63,6 +63,7 @@ Go to `.../translation/get` to edit your translations lines.
 Before save, backup file will store in `storage/app/translations`.
 Check that in `.../translation/log` page.
 
+You can add new file to folder `lang/base`, it will be automatically added in editor.
 
 ## Change log
 
