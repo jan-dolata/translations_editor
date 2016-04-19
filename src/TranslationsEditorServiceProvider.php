@@ -19,13 +19,15 @@ class TranslationsEditorServiceProvider extends ServiceProvider
     public function boot()
     {
         // use this if your package has views
-        $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'TranslationsEditor');
+        if(config('TranslationsEditor.useDefault'))
+            $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'TranslationsEditor');
 
         // use this if your package has lang files
         // $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'TranslationsEditor');
 
         // use this if your package has routes
-        $this->setupRoutes($this->app->router);
+        if(config('TranslationsEditor.useDefault'))
+            $this->setupRoutes($this->app->router);
 
         // use this if your package needs a config file
         $this->publishes([

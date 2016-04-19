@@ -13,6 +13,11 @@ return [
     'fillEmpty' => true,
 
     /**
+     * Use default controller, views and routes
+     */
+    'useDefault' => true,
+
+    /**
      * Routes middleware
      */
     'middleware' => 'auth',
