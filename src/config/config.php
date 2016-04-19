@@ -12,4 +12,16 @@ return [
      */
     'fillEmpty' => true,
 
+    /**
+     * Routes middleware
+     */
+    'middleware' => 'auth',
+
+    /**
+     * Public library in head
+     */
+    'bootstrapCssPath' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+    'bootstrapJsPath' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+    'jqueryPath' => '/js/lib/jquery.min.js'
+
 ];

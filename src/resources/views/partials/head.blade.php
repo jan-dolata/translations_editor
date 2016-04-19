@@ -1,9 +1,9 @@
 <title>TG - Translations</title>
 
-<link rel="stylesheet" href="{{ asset('/vendor/bootstrap/css/bootstrap.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ asset(config('TranslationsEditor.bootstrapCssPath')) }}" type="text/css" />
+<script type="text/javascript" src="{{ asset(config('TranslationsEditor.jqueryPath')) }}"></script>
+<script type="text/javascript" src="{{ asset(config('TranslationsEditor.bootstrapJsPath')) }}"></script>
 <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') }}" type="text/css" />
-<script type="text/javascript" src="{{ asset('/vendor/jquery/jquery.js') }}"></script>
-<script type="text/javascript" src="{{ asset('/vendor/bootstrap/js/bootstrap.js') }}"></script>
 
 <style type="text/css">
     body {
