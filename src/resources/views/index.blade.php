@@ -6,7 +6,7 @@
     <table class="table table-condensed table-hover">
         <thead>
             <tr>
-                <th>
+                <th class="cell-50">
                     # ({{ count($translations) }})
                 </th>
                 @foreach ($translations[0]->trans as $lang => $trans)
@@ -20,7 +20,7 @@
         <tbody>
             @foreach ($translations as $index => $translation)
                 <tr>
-                    <td>
+                    <td class="cell-50">
                         <small class="text-muted">
                             {{ $index + 1 }}. {{ $translation->key }}
                         </small>

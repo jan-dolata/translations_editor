@@ -29,4 +29,8 @@
     .container {
         margin-top: 74px;
     }
+
+    .cell-50 {
+        width: 50%;
+    }
 </style>
