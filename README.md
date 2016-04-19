@@ -24,7 +24,7 @@ JanDolata\TranslationsEditor\TranslationsEditorServiceProvider::class
 And publish TranslationsEditor config.
 
 ``` bash
-$ php artisan vendor:publish
+$ php artisan vendor:publish --provider="JanDolata\TranslationsEditor\TranslationsEditorServiceProvider"
 ```
 
 Check config file.
@@ -64,14 +64,6 @@ Before save, backup file will store in `storage/app/translations`.
 Check that in `.../translation/log` page.
 
 You can add new file to folder `lang/base`, it will be automatically added in editor.
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
 
 ## Security
 
