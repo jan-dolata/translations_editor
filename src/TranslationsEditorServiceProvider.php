@@ -19,24 +19,24 @@ class TranslationsEditorServiceProvider extends ServiceProvider
     public function boot()
     {
         // use this if your package has views
-        if(config('TranslationsEditor.useDefault'))
+        if(config('translations_editor.useDefault'))
             $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'TranslationsEditor');
 
         // use this if your package has lang files
         // $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'TranslationsEditor');
 
         // use this if your package has routes
-        if(config('TranslationsEditor.useDefault'))
+        if(config('translations_editor.useDefault'))
             $this->setupRoutes($this->app->router);
 
         // use this if your package needs a config file
         $this->publishes([
-                __DIR__.'/config/config.php' => config_path('TranslationsEditor.php'),
+                __DIR__.'/config/translations_editor.php' => config_path('translations_editor.php'),
         ]);
 
         // use the vendor configuration file as fallback
         $this->mergeConfigFrom(
-            __DIR__.'/config/config.php', 'TranslationsEditor'
+            __DIR__.'/config/translations_editor.php', 'translations_editor'
         );
     }
     /**
@@ -63,7 +63,7 @@ class TranslationsEditorServiceProvider extends ServiceProvider
 
         // use this if your package has a config file
         config([
-                'config/TranslationsEditor.php',
+                'config/translations_editor.php',
         ]);
     }
     private function registerTranslationsEditor()

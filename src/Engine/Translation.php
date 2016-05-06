@@ -42,13 +42,13 @@ class Translation
      */
     public function __construct($fillEmpty = true)
     {
-        $this->languages = config('app.languages');
+        $this->languages = config('translations_editor.languages');
 
         foreach (File::allFiles($this->langPath() . '/base') as $file) {
             $this->files[] = basename($file->getPathname(), '.php');
         }
 
-        $this->fillEmpty = config('TranslationsEditor.fillEmpty');
+        $this->fillEmpty = config('translations_editor.fillEmpty');
     }
 
     private function langPath()

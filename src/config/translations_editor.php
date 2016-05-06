@@ -20,13 +20,18 @@ return [
     /**
      * Routes middleware
      */
-    'middleware' => 'auth',
+    'middleware' => ['web', 'auth'],
+
+    /**
+     * Back button route
+     */
+    'backUrl' => '/',
 
     /**
      * Public library in head
      */
     'bootstrapCssPath' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
     'bootstrapJsPath' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
-    'jqueryPath' => '/js/lib/jquery.min.js'
+    'jqueryPath' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'
 
 ];

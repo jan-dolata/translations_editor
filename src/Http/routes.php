@@ -8,8 +8,8 @@ $group = [];
 
 $group['prefix'] = 'translation';
 
-if(! empty(config('TranslationsEditor.middleware')))
-    $group['middleware'] = config('TranslationsEditor.middleware');
+if(! empty(config('translations_editor.middleware')))
+    $group['middleware'] = config('translations_editor.middleware');
 
 Route::group($group, function () {
     Route::get('get/{file?}', 'TranslationController@get')->name('translation_get');

@@ -1,5 +1,5 @@
 <div class="translation-nav">
-    <a href="/" class="btn btn-info">
+    <a href="{{ config('translations_editor.backUrl') }}" class="btn btn-info">
         <i class="fa fa-home"></i>
     </a>
     <a href="{{ route('translation_log') }}" class="btn btn-info"  style="margin-right: 20px" >
