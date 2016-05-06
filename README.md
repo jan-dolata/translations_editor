@@ -30,7 +30,7 @@ $ php artisan vendor:publish --provider="JanDolata\TranslationsEditor\Translatio
 Check config file.
 
 ```
-config/TranslationsEditor.php
+config/translations_editor.php
 ```
 
 Change folder name `resources/lang/en` to `resources/lang/base` (for new project).
