@@ -29,7 +29,7 @@
                     </td>
                     @foreach ($translation->trans as $lang => $trans)
                         <td>
-                            <textarea class="input-sm form-control transInput" data-lang="{{ $lang }}" data-key="{{ $translation->key }}" >{{ $trans }}</textarea>
+                            <textarea class="input-sm form-control transInput" data-lang="{{ $lang }}" data-key="{{ $translation->key }}" >{{ str_replace('&', '&amp;', $trans ) }}</textarea>
                         </td>
                     @endforeach
                 </tr>
