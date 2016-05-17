@@ -38,6 +38,8 @@ class TranslationsEditorServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/config/translations_editor.php', 'translations_editor'
         );
+
+        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'TranslationsEditor');
     }
     /**
      * Define the routes for the application.
@@ -63,7 +65,7 @@ class TranslationsEditorServiceProvider extends ServiceProvider
 
         // use this if your package has a config file
         config([
-                'config/translations_editor.php',
+            'config/translations_editor.php',
         ]);
     }
     private function registerTranslationsEditor()
