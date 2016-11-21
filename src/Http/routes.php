@@ -11,8 +11,8 @@ $group['prefix'] = 'translation';
 if(! empty(config('translations_editor.middleware')))
     $group['middleware'] = config('translations_editor.middleware');
 
-if(! empty(config('translations_editor.route_params'))) {
-    foreach(config('translations_editor.route_params') as $param => $value) {
+if(! empty(config('translations_editor.routeParams'))) {
+    foreach(config('translations_editor.routeParams') as $param => $value) {
         $group[$param] = $value;
     }
 }

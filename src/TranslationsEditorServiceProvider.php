@@ -22,9 +22,6 @@ class TranslationsEditorServiceProvider extends ServiceProvider
         if(config('translations_editor.useDefault'))
             $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'TranslationsEditor');
 
-        // use this if your package has lang files
-        // $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'TranslationsEditor');
-
         // use this if your package has routes
         if(config('translations_editor.useDefault'))
             $this->setupRoutes($this->app->router);
@@ -38,8 +35,6 @@ class TranslationsEditorServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/config/translations_editor.php', 'translations_editor'
         );
-
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'TranslationsEditor');
     }
     /**
      * Define the routes for the application.

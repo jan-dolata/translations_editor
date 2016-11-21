@@ -2,7 +2,9 @@
 
 @section('content')
 
-<p>{{ trans('TranslationsEditor::messages.save_before_tab_switch') }}</p>
+@if (config('translations_editor.infoHeaderTransKey'))
+<p>{{ trans(config('translations_editor.infoHeaderTransKey')) }}</p>
+@endif
 
 @if (! empty($translations))
     <table class="table table-condensed table-hover">

@@ -25,7 +25,9 @@ return [
     /**
     * Route custom parameters i.e. ['prefix' => 'example']
     */
-    'route_params' => [],
+    'routeParams' => [],
+
+    'infoHeaderTransKey' => '',
 
     /**
      * Back button route
