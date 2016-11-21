@@ -23,6 +23,11 @@ return [
     'middleware' => ['web', 'auth'],
 
     /**
+    * Route custom parameters i.e. ['prefix' => 'example']
+    */
+    'route_params' => [],
+
+    /**
      * Back button route
      */
     'backUrl' => '/',

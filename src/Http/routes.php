@@ -11,6 +11,12 @@ $group['prefix'] = 'translation';
 if(! empty(config('translations_editor.middleware')))
     $group['middleware'] = config('translations_editor.middleware');
 
+if(! empty(config('translations_editor.route_params'))) {
+    foreach(config('translations_editor.route_params') as $param => $value) {
+        $group[$param] = $value;
+    }
+}
+
 Route::group($group, function () {
     Route::get('get/{file?}', 'TranslationController@get')->name('translation_get');
     Route::post('save', 'TranslationController@save')->name('translation_save');
